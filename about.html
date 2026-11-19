@@ -40,6 +40,16 @@
                 <a href="contact.html" onclick="toggleMenu()" class="px-4 py-3 rounded-2xl text-base font-semibold text-slate-800 hover:bg-slate-100">تماس با ما</a>
                 </nav>
     </aside>
+    <script>
+function toggleMenu() {
+  var m = document.getElementById('sideMenu');
+  var o = document.getElementById('menuOverlay');
+  if (!m) { return; }
+  var closed = m.classList.contains('translate-x-full');
+  if (closed) { m.classList.remove('translate-x-full'); if (o) { o.classList.remove('hidden'); } }
+  else { m.classList.add('translate-x-full'); if (o) { o.classList.add('hidden'); } }
+}
+</script>
     
     <div class="max-w-7xl mx-auto px-6 pt-6"><a href="index.html" class="inline-flex items-center gap-2 font-bold text-sm bg-cyan-600 hover:bg-cyan-500 text-white px-3 py-2 rounded-full transition shadow-lg"><span class="flex items-center justify-center w-6 h-6 rounded-full bg-white/25 text-base leading-none">←</span> برگشت</a></div>
     <section class="py-20 px-6 max-w-4xl mx-auto text-center">
