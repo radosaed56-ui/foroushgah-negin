@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { font-family: 'Vazirmatn', sans-serif; }
+        .header-bg { background-color: rgba(2,6,23,0.85); }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-cyan-500 selection:text-white pt-24">
+
+    
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b transition header-bg">
+        <div class="max-w-7xl mx-auto px-6 h-auto min-h-[5rem] py-3 flex items-center flex-wrap justify-between gap-2">
+            <h1 class="text-xl font-black tracking-tight"><a href="index.html">فروشگاه نگین</a></h1>
+            <nav class="flex flex-wrap items-center gap-3 md:gap-8 text-xs md:text-sm font-medium">
+                <a href="index.html" class="transition hover:opacity-70">خانه</a>
+                <a href="services.html" class="transition hover:opacity-70">خدمات و محصولات</a>
+                <a href="gallery.html" class="transition font-bold text-cyan-500">گالری</a>
+                <a href="about.html" class="transition hover:opacity-70">درباره ما</a>
+                <a href="contact.html" class="transition hover:opacity-70">تماس با ما</a>
+            </nav>
+            <a href="contact.html" class="hidden sm:inline-block bg-cyan-600 hover:bg-cyan-500 text-white text-sm font-semibold px-5 py-2.5 rounded-2xl transition shadow-md shadow-cyan-600/30">ارتباط سریع</a>
+            <button type="button" onclick="toggleCart()" class="bg-cyan-600 hover:bg-cyan-500 text-white text-xs md:text-sm font-bold px-3 md:px-5 py-2.5 rounded-2xl transition shadow-md">سبد خرید (<span id="cartCount">0</span>)</button>
+        </div>
+    </header>
+    
+    <div class="max-w-7xl mx-auto px-6 pt-6"><a href="index.html" class="inline-flex items-center gap-2 font-bold text-sm bg-cyan-600 hover:bg-cyan-500 text-white px-4 py-2 rounded-2xl transition shadow-md">← برگشت</a></div>
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-black text-center mb-12">گالری تصاویر و نمونه‌ها</h2>
+        <div class="grid md:grid-cols-3 gap-6"><div class="rounded-2xl overflow-hidden border border-slate-700/30 shadow-lg bg-slate-900 border-slate-800"><img src="images/pic1.jpg" alt="تصویر 1" class="w-full h-64 object-cover hover:scale-105 transition duration-500"><div class="p-4"><h3 class="text-lg font-bold mb-1">ساعت هوشمند</h3><div class="mb-2"><span class="text-amber-400 text-base tracking-wide">★★★★☆</span> <span class="text-sm opacity-80">4.5</span></div><p class="text-sm opacity-80 mb-2">کیفیت عالی، ضمانت اصالت کالا و ارسال سریع</p><p class="font-black text-lg text-cyan-500">1200000 تومان</p><div class="mt-3"><button type="button" disabled class="block text-center w-full bg-slate-400 text-white font-bold py-3 rounded-2xl opacity-60 cursor-not-allowed">شماره واتساپ وارد نشده — سفارش غیرفعال است</button></div></div></div><div class="rounded-2xl overflow-hidden border border-slate-700/30 shadow-lg bg-slate-900 border-slate-800"><img src="images/pic2.jpg" alt="تصویر 2" class="w-full h-64 object-cover hover:scale-105 transition duration-500"><div class="p-4"><h3 class="text-lg font-bold mb-1">هدفون بیسیم</h3><div class="mb-2"><span class="text-amber-400 text-base tracking-wide">★★★★★</span> <span class="text-sm opacity-80">4.8</span></div><p class="text-sm opacity-80 mb-2">کیفیت عالی، ضمانت اصالت کالا و ارسال سریع</p><p class="font-black text-lg text-cyan-500">850000 تومان</p><div class="mt-3"><button type="button" disabled class="block text-center w-full bg-slate-400 text-white font-bold py-3 rounded-2xl opacity-60 cursor-not-allowed">شماره واتساپ وارد نشده — سفارش غیرفعال است</button></div></div></div><div class="rounded-2xl overflow-hidden border border-slate-700/30 shadow-lg bg-slate-900 border-slate-800"><img src="images/pic3.png" alt="تصویر 3" class="w-full h-64 object-cover hover:scale-105 transition duration-500"><div class="p-4"><h3 class="text-lg font-bold mb-1">پاوربانک</h3><div class="mb-2"><span class="text-amber-400 text-base tracking-wide">★★★★★</span> <span class="text-sm opacity-80">4.6</span></div><p class="text-sm opacity-80 mb-2">کیفیت عالی، ضمانت اصالت کالا و ارسال سریع</p><p class="font-black text-lg text-cyan-500">2000000 تومان</p><div class="mt-3"><button type="button" disabled class="block text-center w-full bg-slate-400 text-white font-bold py-3 rounded-2xl opacity-60 cursor-not-allowed">شماره واتساپ وارد نشده — سفارش غیرفعال است</button></div></div></div></div>
+    </section>
+    
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-500 py-10 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm font-medium mb-4">
+                <span>✅ ضمانت اصالت کالا</span>
+                <span>🔄 ۷ روز ضمانت بازگشت</span>
+                <span>🚚 ارسال سریع</span>
+                <span>📞 پشتیبانی و پاسخگویی سریع</span>
+            </div>
+            <p class="text-xs opacity-80">تمامی حقوق محفوظ است. طراحی حرفه‌ای چندصفحه‌ای برای <span class="font-semibold">فروشگاه نگین</span>.</p>
+            <p class="text-xs opacity-60 mt-2">شماره واتساپ وارد نشده — سفارش غیرفعال است</p>
+            <p class="mt-4"><a href="index.html" class="text-sm font-bold underline">← برگشت به خانه</a></p>
+        </div>
+    </footer>
+    
+    <div class="h-16 md:hidden"></div>
+    <nav class="mobile-nav fixed bottom-0 left-0 right-0 z-50 md:hidden border-t backdrop-blur-xl bg-slate-950/95 border-slate-800 text-slate-100"><div class="grid grid-cols-5 max-w-7xl mx-auto"><a href="index.html" class="flex flex-col items-center gap-0.5 py-2 px-1 text-[11px] leading-tight opacity-75 hover:opacity-100"><span class="text-lg leading-none">🏠</span><span>خانه</span></a><a href="services.html" class="flex flex-col items-center gap-0.5 py-2 px-1 text-[11px] leading-tight opacity-75 hover:opacity-100"><span class="text-lg leading-none">🛍️</span><span>محصولات</span></a><a href="gallery.html" class="flex flex-col items-center gap-0.5 py-2 px-1 text-[11px] leading-tight font-black text-cyan-500"><span class="text-lg leading-none">🖼️</span><span>گالری</span></a><a href="about.html" class="flex flex-col items-center gap-0.5 py-2 px-1 text-[11px] leading-tight opacity-75 hover:opacity-100"><span class="text-lg leading-none">ℹ️</span><span>درباره</span></a><a href="contact.html" class="flex flex-col items-center gap-0.5 py-2 px-1 text-[11px] leading-tight opacity-75 hover:opacity-100"><span class="text-lg leading-none">📞</span><span>تماس</span></a></div></nav>
+    <div id="cartDrawer" data-wa="" class="hidden fixed bottom-0 left-0 right-0 z-[55] "md:bottom-4 md:left-1/2 md:-translate-x-1/2 md:right-auto md:w-[480px] md:rounded-2xl "border shadow-2xl bg-slate-900 text-slate-100 border-slate-700"><div class="p-4"><p class="text-sm font-bold text-red-600 py-2">شماره واتساپ وارد نشده — سفارش غیرفعال است</p><div class="flex justify-between items-center mb-2"><h3 class="text-lg font-black">سبد خرید</h3><button type="button" onclick="closeCart()" class="font-bold text-sm">بستن X</button></div><p id="cartEmpty" class="text-sm opacity-75 py-4 text-center">سبد خرید شما خالی است.</p><div id="cartItems"></div><div class="flex justify-between font-black mt-3"><span>جمع کل:</span><span id="cartTotal">0 تومان</span></div><a id="cartCheckout" target="_blank" class="block text-center w-full mt-3 ""bg-green-600 hover:bg-green-500 text-white font-bold py-3 rounded-2xl transition">تکمیل سفارش از واتساپ</a></div></div>
+    <script src="js/script.js"></script>
+</body>
+</html>
