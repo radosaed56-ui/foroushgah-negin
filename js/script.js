@@ -82,12 +82,8 @@ function renderCart() {
       checkout.removeAttribute('href');
     } else {
       checkout.style.opacity = '1';
-      var lines = ['سلام، می‌خواهم این کالاها را سفارش بدهم:'];
-      for (var j = 0; j < cart.length; j++) {
-        lines.push('• ' + cart[j].name + ' × ' + cart[j].qty + ' — ' + formatToman((cart[j].price || 0) * cart[j].qty));
-      }
-      lines.push('جمع کل: ' + formatToman(total));
-      checkout.href = '' + wa + '?text=' + encodeURIComponent(lines.join('\n'));
+      checkout.href = 'order.html';
+      checkout.textContent = 'ادامه و ثبت سفارش ←';
     }
   }
 }
