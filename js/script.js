@@ -39,6 +39,8 @@ function addToCart(name, price) {
   if (found) { found.qty += 1; } else { cart.push({ name: name, price: price || 0, qty: 1 }); }
   saveCart(cart); updateCartBadge(); renderCart();
   showToast('«' + name + '» به سبد خرید اضافه شد');
+  var d = document.getElementById('cartDrawer');
+  if (d && d.classList.contains('hidden')) { renderCart(); d.classList.remove('hidden'); }
 }
 function removeFromCart(idx) {
   var cart = loadCart(); cart.splice(idx, 1);
@@ -73,11 +75,7 @@ function renderCart() {
   if (empty) { empty.style.display = cart.length ? 'none' : 'block'; }
   if (checkout) {
     var wa = drawer.getAttribute('data-wa') || '';
-    if (!wa) {
-      checkout.style.opacity = '0.5';
-      checkout.removeAttribute('href');
-      checkout.textContent = 'شماره واتساپ وارد نشده — سفارش غیرفعال است';
-    } else if (!cart.length) {
+    if (!cart.length) {
       checkout.style.opacity = '0.5';
       checkout.removeAttribute('href');
     } else {
