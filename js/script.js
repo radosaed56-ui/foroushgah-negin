@@ -134,11 +134,3 @@ document.addEventListener('DOMContentLoaded', function () {
   if (s) { s.addEventListener('input', filterProducts); filterProducts(); }
 });
 
-function toggleMenu() {
-  var m = document.getElementById('sideMenu');
-  var o = document.getElementById('menuOverlay');
-  if (!m) { return; }
-  var closed = m.classList.contains('translate-x-full');
-  if (closed) { m.classList.remove('translate-x-full'); if (o) { o.classList.remove('hidden'); } }
-  else { m.classList.add('translate-x-full'); if (o) { o.classList.add('hidden'); } }
-}
